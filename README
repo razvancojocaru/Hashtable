@@ -1,0 +1,30 @@
+// Cojocaru Mihail-Razvan 323CA
+
+Implementare
+	Pentru prima parte a temei nu voi intra in foarte multe detalii, deoarece
+codul este comentat detaliat, iar implementarea este scurta si destul de 
+evidenta.
+	Ca detalii de implementare, am folosit clase interne pentru Bucket si 
+Entry, precum si sintaxa for-each cat de mult posibil, pentru lizibilitate.
+	Probleme in implementare nu am intalnit foarte multe, singurul lucru de 
+mentionat este ca am aflat ca pot folosi membrii privati ai claselor interne
+in clasa parinte (recunosc ca am incercat initial sa folosesc getEntries din
+Bucket pentru diverse operatii pe bucket, lucru care semnala eroare).
+
+
+Analiza
+	In ceea ce priveste analiza, am implementat clasele Student si LazyStudent 
+conform indicatiilor din tema. Pentru Student am folosit o metoda hashCode
+dependenta de ambii membri ai clasei(valoarea intregului "varsta" si hashCode-ul
+String-ului "nume"), iar pentru LazyStudent am folosit o metoda care intoarce
+mereu valoarea 1.
+	In MainClass am folosit metoda getRandomStrings din HashTester pentru a 
+genera aleator numele studentilor. De asemenea, am ales sa inserez cate 10.000
+de intrari in fiecare HashMap, precum si 10.000 de accesari, pentru a fi cat
+mai evidenta diferenta de timp. Numarul de bucket-uri din fiecare HashMap este
+1000.
+	Am observat ca pentru HashMap-ul cu Student, timpul de rulare a apelurilor
+GET este de aproximativ 6-7 ori mai mic decat timul de rulare pentru HashMap-ul
+cu LazyStudent.
+	In concluzie, functia de hash este o proprietate importanta pentru 
+eficienta tabelelor de dispersie.
